@@ -3,169 +3,119 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nama Anda — CV</title>
-  <meta name="description" content="Curriculum Vitae digital yang estetis dan responsif." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <title>CV — [Nama Anda]</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="topbar">
-    <div class="container header-inner">
-      <div class="brand">
-        <span class="logo">NM</span>
-        <div>
-          <div class="name">Nama Anda</div>
-          <div class="tag">Designer • Frontend Developer</div>
-        </div>
-      </div>
-      <nav class="nav">
-        <a href="#about">Tentang</a>
-        <a href="#skills">Skill</a>
-        <a href="#experience">Pengalaman</a>
-        <a href="#projects">Proyek</a>
-        <a href="#contact" class="cta">Hubungi</a>
-      </nav>
+    <div class="brand">
+      <h1 class="name">Nama Anda</h1>
+      <p class="role">Full‑Stack Developer • UI/UX Enthusiast</p>
+    </div>
+    <div class="actions">
+      <button id="themeToggle" title="Ganti tema">🌓</button>
+      <button id="printBtn" title="Cetak / Download PDF">🖨️ Cetak</button>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-card glass">
-          <div class="hero-meta">
-            <div class="avatar" aria-hidden="true">
-              <!-- placeholder avatar -->
-              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop&crop=faces" alt="Foto Anda">
-            </div>
-            <div>
-              <h1>Nama Anda</h1>
-              <p class="lead">Saya membuat antarmuka yang estetis dan pengalaman pengguna yang berkesan.</p>
-              <div class="buttons">
-                <a href="#" class="btn primary" id="downloadResume">Download Resume (PDF)</a>
-                <a href="#contact" class="btn outline">Hire me</a>
-              </div>
-            </div>
-          </div>
+  <main class="container">
+    <aside class="sidebar">
+      <div class="photo" aria-hidden="true">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img">
+          <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6c5ce7"/><stop offset="1" stop-color="#00b894"/></linearGradient></defs>
+          <circle cx="50" cy="35" r="20" fill="url(#g)"></circle>
+          <rect x="20" y="60" width="60" height="20" rx="10" fill="#eee" opacity="0.6"></rect>
+        </svg>
+      </div>
 
-          <div class="proposal">
-            <div>
-              <strong>Penawaran Pembuatan Website CV Premium</strong>
-              <p>Termasuk desain kustom, responsive, animasi, optimasi performa & SEO dasar.</p>
-            </div>
-            <div class="price">Rp 1.000.000.000</div>
-          </div>
+      <section class="contact card">
+        <h2>Kontak</h2>
+        <ul>
+          <li>Email: <a href="mailto:anda@example.com">anda@example.com</a></li>
+          <li>Telepon: <a href="tel:+628123456789">+62 812‑3456‑789</a></li>
+          <li>LinkedIn: <a href="https://linkedin.com/in/username" target="_blank" rel="noopener">/in/username</a></li>
+          <li>Website: <a href="https://example.com" target="_blank" rel="noopener">example.com</a></li>
+        </ul>
+      </section>
+
+      <section class="price card">
+        <h2>Tarif Eksklusif</h2>
+        <p class="bigprice" id="bigPrice">Rp 1.000.000.000.000</p>
+        <p class="muted">(Satu triliun rupiah)</p>
+        <div class="price-actions">
+          <button id="copyPrice">Salin Harga</button>
+          <button id="contactBtn">Hubungi untuk Negosiasi</button>
         </div>
+      </section>
 
-        <div class="summary">
-          <h3>Ringkasan Profesional</h3>
-          <p>Front-end developer & UI/UX designer dengan fokus pada estetika, microinteractions, dan performa. Berpengalaman membangun website portofolio dan produk digital untuk startup dan brand.</p>
+      <section class="skills card">
+        <h2>Keahlian</h2>
+        <ul>
+          <li>HTML5, CSS3, JavaScript (ES6+)</li>
+          <li>React / Vue / Svelte</li>
+          <li>Node.js, Express, REST API</li>
+          <li>UI/UX, Figma, Responsive Design</li>
+          <li>Testing, CI/CD, Git</li>
+        </ul>
+      </section>
+    </aside>
 
-          <ul class="quick-info">
-            <li><strong>Email</strong><span>nama@domain.com</span></li>
-            <li><strong>Lokasi</strong><span>Jakarta, Indonesia</span></li>
-            <li><strong>Telepon</strong><span>+62 812 3456 7890</span></li>
+    <section class="content">
+      <section class="summary card">
+        <h2>Ringkasan</h2>
+        <p>Saya adalah pengembang full‑stack dengan pengalaman lebih dari 8 tahun membangun aplikasi web skala produksi. Fokus pada pengalaman pengguna, performa, dan code quality. Tersedia untuk proyek eksklusif — tarif premium: Rp 1.000.000.000.000.</p>
+      </section>
+
+      <section class="experience card">
+        <h2>Pengalaman Kerja</h2>
+
+        <article class="job">
+          <h3>Senior Full‑Stack Developer — PT Contoh Teknologi</h3>
+          <span class="period">2020 — Sekarang</span>
+          <ul>
+            <li>Memimpin tim frontend untuk mempercepat delivery produk 2x.</li>
+            <li>Mendesain arsitektur micro frontends dan integrasi API.</li>
           </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section container">
-      <h2>Tentang Saya</h2>
-      <p>Saya menggabungkan estetika visual dengan praktik engineering yang baik untuk membangun antarmuka yang efisien dan menyenangkan dipakai. Saya fokus pada aksesibilitas, performa, dan desain berbasis data.</p>
-    </section>
-
-    <section id="skills" class="section container">
-      <h2>Skill</h2>
-      <div class="skills-grid">
-        <div class="skill">
-          <div class="skill-head">
-            <span>HTML & CSS</span><span>95%</span>
-          </div>
-          <div class="bar"><div class="bar-fill" data-fill="95"></div></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-head">
-            <span>JavaScript</span><span>90%</span>
-          </div>
-          <div class="bar"><div class="bar-fill" data-fill="90"></div></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-head">
-            <span>React / Vue</span><span>80%</span>
-          </div>
-          <div class="bar"><div class="bar-fill" data-fill="80"></div></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-head">
-            <span>UI / UX</span><span>92%</span>
-          </div>
-          <div class="bar"><div class="bar-fill" data-fill="92"></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="section container">
-      <h2>Pengalaman</h2>
-      <ol class="timeline">
-        <li>
-          <div class="time">2023 — Sekarang</div>
-          <div class="role">
-            Senior Frontend Developer — Nama Perusahaan
-            <p>Membangun design system, meningkatkan skor Lighthouse hingga 95+, dan memimpin tim 3 developer.</p>
-          </div>
-        </li>
-        <li>
-          <div class="time">2020 — 2023</div>
-          <div class="role">
-            UI/UX Designer — Agensi Kreatif
-            <p>Desain konsep dan prototyping untuk 20+ website dan aplikasi mobile.</p>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <section id="projects" class="section container">
-      <h2>Proyek Terpilih</h2>
-      <div class="projects-grid">
-        <article class="project-card">
-          <h3>Portfolio Web</h3>
-          <p>Website portofolio interaktif dengan animasi halus dan CMS headless.</p>
         </article>
-        <article class="project-card">
-          <h3>Aplikasi Dashboard</h3>
-          <p>Dashboard analitik dengan visualisasi data real-time dan accessibility-first.</p>
-        </article>
-      </div>
-    </section>
 
-    <section id="contact" class="section container">
-      <h2>Hubungi Saya</h2>
-      <form id="contactForm" class="contact-form" novalidate>
-        <div class="row">
-          <input type="text" name="name" placeholder="Nama" required>
-          <input type="email" name="email" placeholder="Email" required>
+        <article class="job">
+          <h3>Frontend Developer — Startup ABC</h3>
+          <span class="period">2016 — 2020</span>
+          <ul>
+            <li>Membangun antarmuka responsif dan sistem design tokens.</li>
+            <li>Mengimplementasikan automated testing dan performance budget.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="education card">
+        <h2>Pendidikan</h2>
+        <p>Universitas Contoh — S.T. Teknik Informatika (2012 — 2016)</p>
+      </section>
+
+      <section class="projects card">
+        <h2>Proyek & Kontribusi</h2>
+        <ul>
+          <li>Platform e‑commerce skala jutaan transaksi/bulan — Frontend & Integrasi</li>
+          <li>Library komponen internal — digunakan oleh 10+ tim</li>
+          <li>Kontributor open‑source: beberapa paket NPM kecil untuk developer tooling</li>
+        </ul>
+      </section>
+
+      <section class="cta card">
+        <h2>Tertarik?</h2>
+        <p>Untuk pembicaraan lebih lanjut, silakan tekan tombol di bawah — atau cetak CV ini sebagai PDF dan forward ke pihak terkait.</p>
+        <div class="cta-actions">
+          <a class="btn primary" href="mailto:anda@example.com?subject=Minat%20CV%20(exklusif)">Kirim Email</a>
+          <button id="negotiateBtn" class="btn">Negosiasi</button>
         </div>
-        <input type="text" name="subject" placeholder="Subjek" required>
-        <textarea name="message" rows="5" placeholder="Pesan..." required></textarea>
-        <div class="form-actions">
-          <button type="submit" class="btn primary">Kirim Pesan</button>
-          <button type="button" class="btn outline" id="clearBtn">Bersihkan</button>
-        </div>
-        <p class="form-note">Atau langsung email ke <a href="mailto:nama@domain.com">nama@domain.com</a></p>
-      </form>
+      </section>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> Nama Anda • Dibuat dengan ❤️ • Harga penawaran: <strong>Rp 1.000.000.000</strong></p>
-    </div>
+    <p>CV dibuat dengan HTML • CSS • JS — Harga referensi: Rp 1.000.000.000.000</p>
   </footer>
-
-  <div id="toast" class="toast" aria-live="polite"></div>
 
   <script src="script.js"></script>
 </body>
