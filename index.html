@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nama Anda — CV</title>
+  <meta name="description" content="Curriculum Vitae digital yang estetis dan responsif." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="logo">NM</span>
+        <div>
+          <div class="name">Nama Anda</div>
+          <div class="tag">Designer • Frontend Developer</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#about">Tentang</a>
+        <a href="#skills">Skill</a>
+        <a href="#experience">Pengalaman</a>
+        <a href="#projects">Proyek</a>
+        <a href="#contact" class="cta">Hubungi</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-card glass">
+          <div class="hero-meta">
+            <div class="avatar" aria-hidden="true">
+              <!-- placeholder avatar -->
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop&crop=faces" alt="Foto Anda">
+            </div>
+            <div>
+              <h1>Nama Anda</h1>
+              <p class="lead">Saya membuat antarmuka yang estetis dan pengalaman pengguna yang berkesan.</p>
+              <div class="buttons">
+                <a href="#" class="btn primary" id="downloadResume">Download Resume (PDF)</a>
+                <a href="#contact" class="btn outline">Hire me</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="proposal">
+            <div>
+              <strong>Penawaran Pembuatan Website CV Premium</strong>
+              <p>Termasuk desain kustom, responsive, animasi, optimasi performa & SEO dasar.</p>
+            </div>
+            <div class="price">Rp 1.000.000.000</div>
+          </div>
+        </div>
+
+        <div class="summary">
+          <h3>Ringkasan Profesional</h3>
+          <p>Front-end developer & UI/UX designer dengan fokus pada estetika, microinteractions, dan performa. Berpengalaman membangun website portofolio dan produk digital untuk startup dan brand.</p>
+
+          <ul class="quick-info">
+            <li><strong>Email</strong><span>nama@domain.com</span></li>
+            <li><strong>Lokasi</strong><span>Jakarta, Indonesia</span></li>
+            <li><strong>Telepon</strong><span>+62 812 3456 7890</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <h2>Tentang Saya</h2>
+      <p>Saya menggabungkan estetika visual dengan praktik engineering yang baik untuk membangun antarmuka yang efisien dan menyenangkan dipakai. Saya fokus pada aksesibilitas, performa, dan desain berbasis data.</p>
+    </section>
+
+    <section id="skills" class="section container">
+      <h2>Skill</h2>
+      <div class="skills-grid">
+        <div class="skill">
+          <div class="skill-head">
+            <span>HTML & CSS</span><span>95%</span>
+          </div>
+          <div class="bar"><div class="bar-fill" data-fill="95"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span>JavaScript</span><span>90%</span>
+          </div>
+          <div class="bar"><div class="bar-fill" data-fill="90"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span>React / Vue</span><span>80%</span>
+          </div>
+          <div class="bar"><div class="bar-fill" data-fill="80"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span>UI / UX</span><span>92%</span>
+          </div>
+          <div class="bar"><div class="bar-fill" data-fill="92"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section container">
+      <h2>Pengalaman</h2>
+      <ol class="timeline">
+        <li>
+          <div class="time">2023 — Sekarang</div>
+          <div class="role">
+            Senior Frontend Developer — Nama Perusahaan
+            <p>Membangun design system, meningkatkan skor Lighthouse hingga 95+, dan memimpin tim 3 developer.</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">2020 — 2023</div>
+          <div class="role">
+            UI/UX Designer — Agensi Kreatif
+            <p>Desain konsep dan prototyping untuk 20+ website dan aplikasi mobile.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2>Proyek Terpilih</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Portfolio Web</h3>
+          <p>Website portofolio interaktif dengan animasi halus dan CMS headless.</p>
+        </article>
+        <article class="project-card">
+          <h3>Aplikasi Dashboard</h3>
+          <p>Dashboard analitik dengan visualisasi data real-time dan accessibility-first.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2>Hubungi Saya</h2>
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="row">
+          <input type="text" name="name" placeholder="Nama" required>
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <input type="text" name="subject" placeholder="Subjek" required>
+        <textarea name="message" rows="5" placeholder="Pesan..." required></textarea>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Kirim Pesan</button>
+          <button type="button" class="btn outline" id="clearBtn">Bersihkan</button>
+        </div>
+        <p class="form-note">Atau langsung email ke <a href="mailto:nama@domain.com">nama@domain.com</a></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Nama Anda • Dibuat dengan ❤️ • Harga penawaran: <strong>Rp 1.000.000.000</strong></p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
